@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="/login/loginPage" method="POST">
+        <div class="imgcountainer">
+            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            {{#if this.active}}
+            <label style="color: red;"> Incorrect UserName or passowred Please Try again</label><br>
+            {{/if}}
+            <label for="usrname"><b>Username</b></label>
+            <input type="email" id="usrname" name="usrname" placeholder="Enter UserName" required>
+            <label for="pasw"><b>Password</b></label>
+            <input type="password" id="pasw" name="pasw" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+
+    
+</body>
+
+</html>
